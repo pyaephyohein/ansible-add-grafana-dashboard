@@ -1,4 +1,4 @@
 [grafana]
-hostname=grafana ansible_ssh_host=localhost
+hostname=grafana
 [grafana:vars]
 ansible_python_interpreter = /usr/bin/python3
