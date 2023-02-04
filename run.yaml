@@ -1,0 +1,5 @@
+- hosts: grafana
+  connection: local
+  become: true
+  roles:
+    - { role: add_grafana_dashboard, tags: 'add_grafana_dashboard' }

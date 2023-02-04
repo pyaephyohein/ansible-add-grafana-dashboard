@@ -1,0 +1,13 @@
+---
+- name: Add the grafana dashboards
+  become: true
+  community.grafana.grafana_dashboard:
+    grafana_url: "{{ grafana.url }}"
+    grafana_api_key: "{{ grafana.api_key }}"
+    state: present
+    commit_message: Updated by ansible
+    overwrite: yes
+    path: "{{ item }}"
+  with_fileglob:
+    - ./*.json
+  
