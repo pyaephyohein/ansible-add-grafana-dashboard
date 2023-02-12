@@ -6,5 +6,5 @@
 
 ### When you run with gitlab CI
 1. Please Add Grafana ```GRAFANA_URL``` and ```GRAFANA_API_KEY``` to Gitlab CI variable
-2. Add Your customized dashboards (filename.json) to [files](Dashboards)
+2. Add Your customized dashboards (filename.json) to [Dashboards](Dashboards)
 
