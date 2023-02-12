@@ -1,0 +1,12 @@
+stages:
+  - Run
+image:
+  name: pyaephyohein/ansible-runner:1.0
+run:
+  stage: Run
+  when: manual
+  script:
+    - sed -i "s|###url###|$GRAFANA_URL|g" group_vars/all.yaml 
+    - sed -i "s|###api_key###|$GRAFANA_API_KEY|g" group_vars/all.yaml
+    - cp -r Dashboards/* roles/add_grafana_dashboard/files/
+    - ansible-playbook -i ./inventory -v run.yaml
