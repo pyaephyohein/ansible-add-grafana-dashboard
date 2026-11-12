@@ -1,0 +1,12 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+# OS / editor
+.DS_Store
